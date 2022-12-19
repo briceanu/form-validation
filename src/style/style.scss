@@ -1,0 +1,26 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  width: 300px;
+  height: 200px;
+  background-color: rgb(64, 70, 62);
+  outline: 2px solid red;
+  border: 2px solid blue;
+  text-align: center;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
