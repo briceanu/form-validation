@@ -11,30 +11,6 @@
     />
   </head>
   <body>
-    <!-- <div class="wrapper">
-      <header>Login Form</header>
-      <form action="#">
-        <div class="field email">
-          <div class="input-area">
-            <input type="text" name="" id=" " placeholder="Email Address" />
-            <i class="material-symbols-outlined icon"> mail </i>
-            <i class="material-symbols-outlined error-icon"> lock </i>
-          </div>
-          <div class="errore-txt">Email can't be blank</div>
-        </div>
-        <div class="field password">
-          <div class="input-area">
-            <input type="password" name="" id=" " placeholder="Password" />
-            <i class="material-symbols-outlined icon"> mail </i>
-            <i class="material-symbols-outlined error-icon"> lock </i>
-            <div class="errore-txt">Password can't be blank</div>
-          </div>
-          <div class="pass-link"><a href="#">Forgot password?</a></div>
-          <input type="submit" name="" id="" value="Login" />
-        </div>
-      </form>
-      <div class="signup-link">Not yet a member?<a href="#">Signup now</a></div>
-    </div> -->
     <form action="#" id="form">
       <h1>Login Form</h1>
       <div class="input_control">
@@ -46,30 +22,27 @@
             placeholder="First name"
           />
           <span class="material-symbols-outlined person"> person_add </span>
-          <span class="material-symbols-outlined lock"> lock </span>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
       </div>
       <div class="input_control">
         <div class="input_area">
           <input
             type="text"
             name="Last_name"
-            id="Last_name"
+            id="last_name"
             placeholder="Last name"
           />
           <span class="material-symbols-outlined person"> person_add </span>
-          <span class="material-symbols-outlined lock"> lock </span>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
       </div>
       <div class="input_control">
         <div class="input_area">
-          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="text" name="email" id="email" placeholder="Email" />
           <span class="material-symbols-outlined envelop email"> mail </span>
-          <span class="material-symbols-outlined lock"> lock </span>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
       </div>
       <div class="input_control">
         <div class="input_area">
@@ -80,22 +53,20 @@
             placeholder="Password"
           />
           <span class="material-symbols-outlined key"> key </span>
-          <span class="material-symbols-outlined lock"> lock </span>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
       </div>
       <div class="input_control">
         <div class="input_area">
           <input
             type="password"
             name="password"
-            id="password"
+            id="confirm_password"
             placeholder="Confirm password"
           />
           <span class="material-symbols-outlined key">key</span>
-          <span class="material-symbols-outlined lock">lock</span>
+          <div class="error"></div>
         </div>
-        <div class="error"></div>
       </div>
       <button type="submit">Submit</button>
     </form>

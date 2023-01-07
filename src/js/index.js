@@ -1,56 +1,74 @@
 import style from '../style/style.scss';
 
-form.onsubmit = (e) => {
-  e.preventDefault(); //preventing from form submitting
-  //if email and password is blank then add shake class in it else call specified function
-  eInput.value == '' ? eField.classList.add('shake', 'error') : checkEmail();
-  pInput.value == '' ? pField.classList.add('shake', 'error') : checkPass();
-  setTimeout(() => {
-    //remove shake class after 500ms
-    eField.classList.remove('shake');
-    pField.classList.remove('shake');
-  }, 500);
-  eInput.onkeyup = () => {
-    checkEmail();
-  }; //calling checkEmail function on email input keyup
-  pInput.onkeyup = () => {
-    checkPass();
-  }; //calling checkPassword function on pass input keyup
-  function checkEmail() {
-    //checkEmail function
-    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //pattern for validate email
-    if (!eInput.value.match(pattern)) {
-      //if pattern not matched then add error and remove valid class
-      eField.classList.add('error');
-      eField.classList.remove('valid');
-      let errorTxt = eField.querySelector('.error-txt');
-      //if email value is not empty then show please enter valid email else show Email can't be blank
-      eInput.value != ''
-        ? (errorTxt.innerText = 'Enter a valid email address')
-        : (errorTxt.innerText = "Email can't be blank");
-    } else {
-      //if pattern matched then remove error and add valid class
-      eField.classList.remove('error');
-      eField.classList.add('valid');
-    }
+const form = document.getElementById('form');
+const first_name = document.getElementById('first_name');
+const last_name = document.getElementById('last_name');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const confirm_password = document.getElementById('confirm_password');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validateInputs();
+});
+const setError = (element, message) => {
+  const inputArea = element.parentElement;
+  const errorDisplay = inputArea.querySelector('.error');
+  errorDisplay.innerText = message;
+  inputArea.classList.add('add_error');
+  inputArea.classList.remove('success');
+};
+const setSucess = (element) => {
+  const inputArea = element.parentElement;
+  const errorDisplay = inputArea.querySelector('.error');
+  errorDisplay.innerText = '';
+  inputArea.classList.add('success');
+  inputArea.classList.remove('add_error');
+};
+
+const isValidEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+const validateInputs = () => {
+  const first_name_value = first_name.value.trim();
+  const last_name_value = last_name.value.trim();
+  const email_value = email.value.trim();
+  const password_value = password.value.trim();
+  const confirm_password_value = confirm_password.value.trim();
+
+  if (first_name_value === '') {
+    setError(first_name, 'please enter a name');
+  } else {
+    setSucess(first_name);
   }
-  function checkPass() {
-    //checkPass function
-    if (pInput.value == '') {
-      //if pass is empty then add error and remove valid class
-      pField.classList.add('error');
-      pField.classList.remove('valid');
-    } else {
-      //if pass is empty then remove error and add valid class
-      pField.classList.remove('error');
-      pField.classList.add('valid');
-    }
+  if (last_name_value === '') {
+    setError(last_name, 'please enter your last name');
+  } else {
+    setSucess(last_name);
   }
-  //if eField and pField doesn't contains error class that mean user filled details properly
-  if (
-    !eField.classList.contains('error') &&
-    !pField.classList.contains('error')
-  ) {
-    window.location.href = form.getAttribute('action'); //redirecting user to the specified url which is inside action attribute of form tag
+  if (email_value === '') {
+    setError(email, 'enter your email');
+  } else if (!isValidEmail(email_value)) {
+    setError(email, 'email not valid');
+  } else {
+    setSucess(email);
+  }
+
+  if (password_value === '') {
+    setError(password, 'enter your password');
+  } else if (password_value.length < 8) {
+    setError(password, 'password must beat at least 8 characters long');
+  } else {
+    setSucess(password);
+  }
+
+  if (confirm_password_value === '') {
+    setError(confirm_password, 'confirm your password');
+  } else if (password_value !== confirm_password_value) {
+    setError(confirm_password, 'passwords do not match');
+  } else {
+    setSucess(confirm_password);
   }
 };

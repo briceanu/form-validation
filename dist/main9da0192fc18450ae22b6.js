@@ -2,23 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/buttons.js":
-/*!***************************!*\
-  !*** ./src/js/buttons.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "mama": () => (/* binding */ mama)
-/* harmony export */ });
-function mama() {
-  console.log(' oanwd oainwd oawi ndo');
-}
-mama();
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/style.scss":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/style.scss ***!
@@ -37,8 +20,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Muli&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Chewy&family=Fredericka+the+Great&family=Lalezar&family=Roboto:wght@300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n::before,\n::after {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\n.container {\n  display: grid;\n  width: 300px;\n  height: 200px;\n  background-color: rgb(64, 70, 62);\n  outline: 2px solid red;\n  border: 2px solid blue;\n  text-align: center;\n}\n.container p {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.container .button_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}", "",{"version":3,"sources":["webpack://./src/style/style.scss"],"names":[],"mappings":"AAAA;;;EAGE,UAAA;EACA,SAAA;EACA,sBAAA;AACF;;AACA;EACE,aAAA;EACA,YAAA;EACA,aAAA;EACA,iCAAA;EACA,sBAAA;EACA,sBAAA;EACA,kBAAA;AAEF;AADE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAGJ;AADE;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;AAGJ","sourcesContent":["*,\n::before,\n::after {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n.container {\n  display: grid;\n  width: 300px;\n  height: 200px;\n  background-color: rgb(64, 70, 62);\n  outline: 2px solid red;\n  border: 2px solid blue;\n  text-align: center;\n  p {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  .button_container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\n#form {\n  display: flex;\n  flex-direction: column;\n  width: 35vw;\n  min-height: auto;\n  background: linear-gradient(45deg, rgba(192, 1, 151, 0.5254901961), rgba(1, 29, 170, 0.6784313725), rgba(85, 2, 175, 0.6431372549));\n  margin: 5rem auto;\n  align-items: center;\n  gap: 1rem;\n}\n\nh1 {\n  text-align: center;\n  padding: 1rem;\n  background-color: #f3ec78;\n  background-image: linear-gradient(45deg, #f3ec78, #af4261);\n  background-size: 100%;\n  -webkit-background-clip: text;\n  -moz-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  -moz-text-fill-color: transparent;\n}\n\n.input_control {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 60%;\n}\n\n.input_control input {\n  width: 100%;\n  padding: 0.9rem;\n  margin: 0.5rem;\n  background-color: rgb(245, 236, 236);\n  border: none;\n  border-radius: 5px;\n  font-weight: 900;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 1.2rem;\n  letter-spacing: 0.1rem;\n  color: rgb(44, 36, 36);\n  font-style: oblique;\n  text-align: center;\n}\n\nbutton[type=submit] {\n  width: 40%;\n  margin: 1rem 0;\n}\nbutton[type=submit] {\n  padding: 0.6em 2em;\n  border: none;\n  outline: none;\n  color: rgb(255, 255, 255);\n  background: #111;\n  cursor: pointer;\n  position: relative;\n  z-index: 0;\n  border-radius: 10px;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n}\nbutton[type=submit]:before {\n  content: \"\";\n  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n  position: absolute;\n  top: -2px;\n  left: -2px;\n  background-size: 400%;\n  z-index: -1;\n  filter: blur(5px);\n  -webkit-filter: blur(5px);\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  animation: glowing-button-85 20s linear infinite;\n  transition: opacity 0.3s ease-in-out;\n  border-radius: 10px;\n}\n@keyframes glowing-button-85 {\n  0% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 400% 0;\n  }\n  100% {\n    background-position: 0 0;\n  }\n}\nbutton[type=submit]:after {\n  z-index: -1;\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: #222;\n  left: 0;\n  top: 0;\n  border-radius: 10px;\n}\n\n.input_control input:focus {\n  outline: 2px solid #002bff;\n}\n\n.input_control ::placeholder {\n  color: rgb(92, 90, 90);\n  font-weight: 900;\n  font-family: \"Fredericka the Great\", cursive;\n  font-size: 1.2rem;\n  letter-spacing: 0.1rem;\n  padding-left: 0.8rem;\n  text-align: center;\n}\n\n.error {\n  padding-left: 2rem;\n  width: 100%;\n  font-size: 1rem;\n  font-family: \"Fredericka the Great\", cursive;\n  font-style: italic;\n  color: rgb(175, 1, 1);\n  text-align: center;\n}\n\n.input_control {\n  position: relative;\n}\n\n.input_area span {\n  position: absolute;\n  transform: translateY(-50%);\n  top: 50%;\n}\n\n.input_area .lock {\n  right: 0px;\n  top: 35px;\n  position: absolute;\n  color: rgba(211, 5, 5, 0.938);\n}\n\n.input_area .person,\n.input_area .email,\n.input_area .key {\n  left: 20px;\n  top: 35px;\n  position: absolute;\n  color: rgb(92, 90, 90);\n}\n\n.input_area.success input {\n  border: 2px solid lime;\n}\n\n.input_area.add_error input {\n  border: 2px solid rgba(255, 56, 96, 0.568627451);\n}\n\n@media (max-width: 1200px) {\n  #form {\n    width: 45vw;\n    background-color: lime;\n  }\n  .input_control {\n    width: 50%;\n  }\n}\n@media (max-width: 1000px) {\n  #form {\n    width: 65vw;\n    background-color: lime;\n  }\n  .input_control {\n    width: 50%;\n  }\n}\n@media (max-width: 700px) {\n  #form {\n    width: 85vw;\n    background-color: red;\n  }\n  .input_control {\n    width: 50%;\n  }\n}\n@media (max-width: 500px) {\n  #form {\n    width: 95vw;\n    background-color: red;\n  }\n  .input_control {\n    width: 65%;\n  }\n}\n@media (max-width: 350px) {\n  #form {\n    width: 95vw;\n    background-color: red;\n  }\n  .input_control {\n    width: 85%;\n  }\n}", "",{"version":3,"sources":["webpack://./src/style/style.scss"],"names":[],"mappings":"AAKA;EACE,sBAAA;EACA,UAAA;EACA,SAAA;AADF;;AAIA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,gBAAA;EACA,mIAAA;EACA,iBAAA;EACA,mBAAA;EACA,SAAA;AADF;;AAGA;EACE,kBAAA;EACA,aAAA;EACA,yBAAA;EACA,0DAAA;EACA,qBAAA;EACA,6BAAA;EACA,0BAAA;EACA,oCAAA;EACA,iCAAA;AAAF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,UAAA;AACF;;AACA;EACE,WAAA;EACA,eAAA;EACA,cAAA;EACA,oCAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,iCA1CU;EA2CV,iBAAA;EACA,sBAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;AAEF;;AACA;EACE,UAAA;EACA,cAAA;AAEF;AADE;EACE,kBAAA;EACA,YAAA;EACA,aAAA;EACA,yBAAA;EACA,gBAAA;EACA,eAAA;EACA,kBAAA;EACA,UAAA;EACA,mBAAA;EACA,iBAAA;EACA,yBAAA;EACA,0BAAA;AAGJ;AAAE;EACE,WAAA;EACA,mHAAA;EAYA,kBAAA;EACA,SAAA;EACA,UAAA;EACA,qBAAA;EACA,WAAA;EACA,iBAAA;EACA,yBAAA;EACA,uBAAA;EACA,wBAAA;EACA,gDAAA;EACA,oCAAA;EACA,mBAAA;AATJ;AAYE;EACE;IACE,wBAAA;EAVJ;EAYE;IACE,2BAAA;EAVJ;EAYE;IACE,wBAAA;EAVJ;AACF;AAaE;EACE,WAAA;EACA,WAAA;EACA,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,OAAA;EACA,MAAA;EACA,mBAAA;AAXJ;;AAcA;EACE,0BAAA;AAXF;;AAcA;EACE,sBAAA;EACA,gBAAA;EACA,4CAhIS;EAiIT,iBAAA;EACA,sBAAA;EACA,oBAAA;EACA,kBAAA;AAXF;;AAcA;EACE,kBAAA;EACA,WAAA;EACA,eAAA;EACA,4CA3IS;EA4IT,kBAAA;EACA,qBAAA;EACA,kBAAA;AAXF;;AAaA;EACE,kBAAA;AAVF;;AAaA;EACE,kBAAA;EACA,2BAAA;EACA,QAAA;AAVF;;AAYA;EACE,UAAA;EACA,SAAA;EACA,kBAAA;EACA,6BAAA;AATF;;AAWA;;;EAGE,UAAA;EACA,SAAA;EACA,kBAAA;EACA,sBAAA;AARF;;AAUA;EACE,sBAAA;AAPF;;AAUA;EACE,gDAAA;AAPF;;AAUA;EACE;IACE,WAAA;IACA,sBAAA;EAPF;EASA;IACE,UAAA;EAPF;AACF;AASA;EACE;IACE,WAAA;IACA,sBAAA;EAPF;EASA;IACE,UAAA;EAPF;AACF;AASA;EACE;IACE,WAAA;IACA,qBAAA;EAPF;EASA;IACE,UAAA;EAPF;AACF;AASA;EACE;IACE,WAAA;IACA,qBAAA;EAPF;EASA;IACE,UAAA;EAPF;AACF;AASA;EACE;IACE,WAAA;IACA,qBAAA;EAPF;EASA;IACE,UAAA;EAPF;AACF","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');\n@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Fredericka+the+Great&family=Lalezar&family=Roboto:wght@300&display=swap');\n$font-fer: 'Fredericka the Great', cursive;\n$font-robo: 'Roboto', sans-serif;\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\n#form {\n  display: flex;\n  flex-direction: column;\n  width: 35vw;\n  min-height: auto;\n  background: linear-gradient(45deg, #c0019786, #011daaad, #5502afa4);\n  margin: 5rem auto;\n  align-items: center;\n  gap: 1rem;\n}\nh1 {\n  text-align: center;\n  padding: 1rem;\n  background-color: #f3ec78;\n  background-image: linear-gradient(45deg, #f3ec78, #af4261);\n  background-size: 100%;\n  -webkit-background-clip: text;\n  -moz-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  -moz-text-fill-color: transparent;\n}\n.input_control {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 60%;\n}\n.input_control input {\n  width: 100%;\n  padding: 0.9rem;\n  margin: 0.5rem;\n  background-color: rgb(245, 236, 236);\n  border: none;\n  border-radius: 5px;\n  font-weight: 900;\n  font-family: $font-robo;\n  font-size: 1.2rem;\n  letter-spacing: 0.1rem;\n  color: rgb(44, 36, 36);\n  font-style: oblique;\n  text-align: center;\n}\n\nbutton[type='submit'] {\n  width: 40%;\n  margin: 1rem 0;\n  & {\n    padding: 0.6em 2em;\n    border: none;\n    outline: none;\n    color: rgb(255, 255, 255);\n    background: #111;\n    cursor: pointer;\n    position: relative;\n    z-index: 0;\n    border-radius: 10px;\n    user-select: none;\n    -webkit-user-select: none;\n    touch-action: manipulation;\n  }\n\n  &:before {\n    content: '';\n    background: linear-gradient(\n      45deg,\n      #ff0000,\n      #ff7300,\n      #fffb00,\n      #48ff00,\n      #00ffd5,\n      #002bff,\n      #7a00ff,\n      #ff00c8,\n      #ff0000\n    );\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    filter: blur(5px);\n    -webkit-filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    animation: glowing-button-85 20s linear infinite;\n    transition: opacity 0.3s ease-in-out;\n    border-radius: 10px;\n  }\n\n  @keyframes glowing-button-85 {\n    0% {\n      background-position: 0 0;\n    }\n    50% {\n      background-position: 400% 0;\n    }\n    100% {\n      background-position: 0 0;\n    }\n  }\n\n  &:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #222;\n    left: 0;\n    top: 0;\n    border-radius: 10px;\n  }\n}\n.input_control input:focus {\n  outline: 2px solid #002bff;\n}\n\n.input_control ::placeholder {\n  color: rgb(92, 90, 90);\n  font-weight: 900;\n  font-family: $font-fer;\n  font-size: 1.2rem;\n  letter-spacing: 0.1rem;\n  padding-left: 0.8rem;\n  text-align: center;\n}\n\n.error {\n  padding-left: 2rem;\n  width: 100%;\n  font-size: 1rem;\n  font-family: $font-fer;\n  font-style: italic;\n  color: rgb(175, 1, 1);\n  text-align: center;\n}\n.input_control {\n  position: relative;\n}\n\n.input_area span {\n  position: absolute;\n  transform: translateY(-50%);\n  top: 50%;\n}\n.input_area .lock {\n  right: 0px;\n  top: 35px;\n  position: absolute;\n  color: rgba(211, 5, 5, 0.938);\n}\n.input_area .person,\n.input_area .email,\n.input_area .key {\n  left: 20px;\n  top: 35px;\n  position: absolute;\n  color: rgb(92, 90, 90);\n}\n.input_area.success input {\n  border: 2px solid lime;\n}\n\n.input_area.add_error input {\n  border: 2px solid #ff386091;\n}\n\n@media (max-width: 1200px) {\n  #form {\n    width: 45vw;\n    background-color: lime;\n  }\n  .input_control {\n    width: 50%;\n  }\n}\n@media (max-width: 1000px) {\n  #form {\n    width: 65vw;\n    background-color: lime;\n  }\n  .input_control {\n    width: 50%;\n  }\n}\n@media (max-width: 700px) {\n  #form {\n    width: 85vw;\n    background-color: red;\n  }\n  .input_control {\n    width: 50%;\n  }\n}\n@media (max-width: 500px) {\n  #form {\n    width: 95vw;\n    background-color: red;\n  }\n  .input_control {\n    width: 65%;\n  }\n}\n@media (max-width: 350px) {\n  #form {\n    width: 95vw;\n    background-color: red;\n  }\n  .input_control {\n    width: 85%;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -525,16 +511,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/doubl_click.wav":
-/*!*****************************!*\
-  !*** ./src/doubl_click.wav ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "images/doubl_click.wav";
-
 /***/ })
 
 /******/ 	});
@@ -588,18 +564,6 @@ module.exports = __webpack_require__.p + "images/doubl_click.wav";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -616,26 +580,6 @@ module.exports = __webpack_require__.p + "images/doubl_click.wav";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -650,32 +594,75 @@ var __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/style.scss */ "./src/style/style.scss");
-/* harmony import */ var _js_buttons_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/buttons.js */ "./src/js/buttons.js");
-/* harmony import */ var _doubl_click_wav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../doubl_click.wav */ "./src/doubl_click.wav");
 
-
-
-var increase_btn = document.querySelector('.increase_button');
-var decrease_btn = document.querySelector('.decrease_button');
-var paragraph = document.querySelector('.text');
-var i = 0;
-var text = 'Rock, Paper, Scissors?';
-function typewriter() {
-  if (i < text.length) {
-    paragraph.textContent += text.charAt(i);
-    i++;
+var form = document.getElementById('form');
+var first_name = document.getElementById('first_name');
+var last_name = document.getElementById('last_name');
+var email = document.getElementById('email');
+var password = document.getElementById('password');
+var confirm_password = document.getElementById('confirm_password');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  validateInputs();
+});
+var setError = function setError(element, message) {
+  var inputArea = element.parentElement;
+  var errorDisplay = inputArea.querySelector('.error');
+  errorDisplay.innerText = message;
+  inputArea.classList.add('add_error');
+  inputArea.classList.remove('success');
+};
+var setSucess = function setSucess(element) {
+  var inputArea = element.parentElement;
+  var errorDisplay = inputArea.querySelector('.error');
+  errorDisplay.innerText = '';
+  inputArea.classList.add('success');
+  inputArea.classList.remove('add_error');
+};
+var isValidEmail = function isValidEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+var validateInputs = function validateInputs() {
+  var first_name_value = first_name.value.trim();
+  var last_name_value = last_name.value.trim();
+  var email_value = email.value.trim();
+  var password_value = password.value.trim();
+  var confirm_password_value = confirm_password.value.trim();
+  if (first_name_value === '') {
+    setError(first_name, 'please enter a name');
+  } else {
+    setSucess(first_name);
   }
-  setTimeout(typewriter, 100);
-}
-typewriter();
-var btn = document.querySelector('.btn_sound');
-var sound = new Audio(_doubl_click_wav__WEBPACK_IMPORTED_MODULE_2__);
-function playSound() {
-  sound.play();
-}
-btn.addEventListener('click', playSound);
+  if (last_name_value === '') {
+    setError(last_name, 'please enter your last name');
+  } else {
+    setSucess(last_name);
+  }
+  if (email_value === '') {
+    setError(email, 'enter your email');
+  } else if (!isValidEmail(email_value)) {
+    setError(email, 'email not valid');
+  } else {
+    setSucess(email);
+  }
+  if (password_value === '') {
+    setError(password, 'enter your password');
+  } else if (password_value.length < 8) {
+    setError(password, 'password must beat at least 8 characters long');
+  } else {
+    setSucess(password);
+  }
+  if (confirm_password_value === '') {
+    setError(confirm_password, 'confirm your password');
+  } else if (password_value !== confirm_password_value) {
+    setError(confirm_password, 'passwords do not match');
+  } else {
+    setSucess(confirm_password);
+  }
+};
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main393930ed4aba42088fe5.js.map
+//# sourceMappingURL=main9da0192fc18450ae22b6.js.map

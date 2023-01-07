@@ -5,16 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>devEnvironment</title>
-  <script defer src="main393930ed4aba42088fe5.js"></script><script defer src="main16a2094af9df27a2b0d7.js"></script></head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,700,1,-25"
+    />
+  <script defer src="main9da0192fc18450ae22b6.js"></script><script defer src="main8f1f552aede34dd2f7e7.js"></script></head>
   <body>
-    <div class="container">
-      <p class="text"></p>
-      <div class="button_container">
-        <button class="increase_button">Increase</button>
-        <button class="decrease_button">Decrease</button>
+    <form action="#" id="form">
+      <h1>Login Form</h1>
+      <div class="input_control">
+        <div class="input_area">
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="First name"
+          />
+          <span class="material-symbols-outlined person"> person_add </span>
+          <div class="error"></div>
+        </div>
       </div>
-    </div>
-    <!-- <audio src="./doubl_click.wav" class="sound">sound</audio> -->
-    <button class="btn_sound">click sound</button>
+      <div class="input_control">
+        <div class="input_area">
+          <input
+            type="text"
+            name="Last_name"
+            id="last_name"
+            placeholder="Last name"
+          />
+          <span class="material-symbols-outlined person"> person_add </span>
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="input_control">
+        <div class="input_area">
+          <input type="text" name="email" id="email" placeholder="Email" />
+          <span class="material-symbols-outlined envelop email"> mail </span>
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="input_control">
+        <div class="input_area">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <span class="material-symbols-outlined key"> key </span>
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="input_control">
+        <div class="input_area">
+          <input
+            type="password"
+            name="password"
+            id="confirm_password"
+            placeholder="Confirm password"
+          />
+          <span class="material-symbols-outlined key">key</span>
+          <div class="error"></div>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
